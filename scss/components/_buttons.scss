@@ -1,0 +1,25 @@
+@import '../variables.scss';
+
+.btn {
+  background-color: #222;
+  color: #fff;
+  padding: 6px 12px !important;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: $primary-color;
+  &:hover {
+    background-color: #0072a3;
+  }
+}
+
+.danger {
+  background-color: #f31a1a;
+  &:hover {
+    background-color: #b91616;
+  }
+}

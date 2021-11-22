@@ -1,0 +1,50 @@
+@import '../variables.scss';
+
+nav {
+  margin: 0.5rem auto;
+  width: $width;
+  display: flex;
+  position: absolute;
+  top: 0;
+  transform: translateX(25%);
+  text-align: center;
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    text-shadow: 2px 2px 4px #00000042;
+    transition: all 300ms ease-out;
+
+    &:hover {
+      border-bottom-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  .active {
+    color: #fff;
+    border-bottom-color: #fff;
+
+    &:hover {
+      border-bottom-color: $primary-color;
+    }
+  }
+
+  :first-child {
+    margin-right: auto;
+    color: #fff;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.transparent {
+  position: absolute;
+  left: 0;
+  right: 0;
+}

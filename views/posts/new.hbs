@@ -1,0 +1,16 @@
+<div class='container'>
+  <h1 class='posts-title'>Create New Post</h1>
+  <form action='/posts' method='post' class='new-post'>
+
+    <label for='title'>Post Title:</label>
+    <input type='text' name='title' id='title' required />
+    <label for='body'>Post Content:</label>
+    <textarea name='body' id='body' cols='36' rows='10' required></textarea>
+    <label for='showPost'>Publish inmediatly?</label>
+    <input type='checkbox' name='showPost' id='showPost' />
+    <div class='form-input'>
+      <button type='submit' class='btn'>Create Post</button>
+      <a href='/posts' class='btn'>Cancel</a>
+    </div>
+  </form>
+</div>

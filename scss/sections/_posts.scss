@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.posts {
+  width: $width;
+  margin: 4rem auto 4rem;
+}
+
+.posts-title {
+  text-align: center;
+  border-bottom: 2px solid $text-color;
+  width: 25%;
+  margin: auto;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.post {
+  margin: 2.5rem auto;
+}
+
+.post-title h2 {
+  display: inline;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.read-more {
+  text-decoration: underline;
+  &:hover {
+    color: $primary-color;
+  }
+}

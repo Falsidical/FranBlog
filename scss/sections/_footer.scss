@@ -1,0 +1,45 @@
+@import '../variables.scss';
+
+footer {
+  background-color: #111;
+  color: #fff;
+  width: 100%;
+  margin-top: auto;
+
+  .footer-box {
+    width: $width;
+    margin: 0 auto;
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-between;
+  }
+  .social {
+    margin: 1rem 0;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      margin: auto 0.3rem;
+    }
+  }
+
+  .links {
+    text-align: start;
+    font-size: 1.25rem;
+    color: gray;
+  }
+
+  a {
+    color: #fff;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.black-end {
+  background-color: #000;
+  height: 2rem;
+  width: 100%;
+}

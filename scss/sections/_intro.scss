@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+.intro {
+  margin: 0 auto;
+  background: url('/img/intro6_bkg.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+}
+
+.intro-box {
+  width: 30%;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 0 0 6px #000;
+
+  .intro-title {
+    font-size: 4rem;
+  }
+
+  .intro-link {
+    color: inherit;
+    line-height: 2;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    text-decoration: underline;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.custom-shape-divider-bottom-1637545065 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1637545065 svg {
+  position: relative;
+  display: block;
+  width: calc(110% + 1.3px);
+  height: 160px;
+}
+
+.custom-shape-divider-bottom-1637545065 .shape-fill {
+  fill: $background-color;
+}

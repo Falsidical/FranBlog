@@ -1,0 +1,16 @@
+<div class='container'>
+  <h1 class='posts-title'>Edit Post</h1>
+  <form action='/posts/{{this.post._id}}?_method=put' method='post' class='new-post'>
+    <label for='title'>Post Title:</label>
+    <input type='text' name='title' id='title' required value='{{this.post.title}}' />
+    <label for='body'>Post Content:</label>
+    <textarea name='body' id='body' cols='36' rows='10' required>{{this.post.body}}</textarea>
+    <label for='hidden'>Hidden?</label>
+    <input type='checkbox' name='hidden' id='hidden'
+    {{#if this.post.hidden}} checked {{/if}}/>
+    <div class='form-input'>
+      <button type='submit' class='btn'>Edit Post</button>
+      <a href='/posts' class='btn'>Cancel</a>
+    </div>
+  </form>
+</div>

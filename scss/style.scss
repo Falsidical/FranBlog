@@ -1,0 +1,63 @@
+@use 'components/typography';
+@use 'components/buttons';
+@use 'components/tables';
+@use 'sections/navbar';
+@use 'sections/intro';
+@use 'sections/posts';
+@use 'sections/aboutme';
+@use 'sections/about';
+@use 'sections/footer';
+@use 'sections/allposts';
+@use 'sections/newpost';
+@use 'sections/admin';
+@import 'variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container {
+  width: $width;
+  margin: 8rem auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}

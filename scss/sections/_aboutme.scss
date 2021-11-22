@@ -1,0 +1,20 @@
+@import '../variables.scss';
+
+.about-me {
+  display: flex;
+  width: 50%;
+  margin: 4rem auto;
+  align-items: center;
+  text-align: center;
+  img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  .description {
+    color: #e7e7e7;
+    padding: 1rem;
+    p {
+      font-style: italic;
+    }
+  }
+}

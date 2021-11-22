@@ -1,0 +1,19 @@
+@import '../variables';
+
+table {
+  margin: 2rem auto;
+  width: 100%;
+  background-color: #15151590;
+  border-radius: 6px;
+}
+
+th {
+  border-bottom: 2px solid white;
+}
+
+table,
+th,
+td {
+  padding: 10px;
+  //border-collapse: collapse;
+}

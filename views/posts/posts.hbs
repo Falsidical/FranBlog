@@ -1,0 +1,15 @@
+<div class='container'>
+
+  <div class='posts-table'>
+    <h1 class='posts-title'>All posts</h1>
+    {{#each posts}}
+      <div class='allposts-post'>
+        <h2>{{this.title}} - {{this.author}}</h2>
+        <p class='allposts-post-body'>{{this.body}}
+        </p>
+        <a href='/posts/{{this._id}}' class='read-more'>Read more...</a>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

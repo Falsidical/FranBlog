@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.allposts {
+  width: $width;
+  margin: 8rem auto;
+}
+
+.allposts-post {
+  margin: 2rem 0;
+}
+
+.allposts-post-body {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}

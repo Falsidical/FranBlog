@@ -1,0 +1,14 @@
+<div class='container'>
+
+  <div class='allposts-post'>
+    <h2>{{this.post.title}} - {{this.post.author}}</h2>
+    <p class='allposts-post-body'>{{this.post.body}}
+    </p>
+    <a href='/posts/' class='read-more'>Go back...</a>
+    <form action='/posts/{{this.post._id}}?_method=DELETE' method='post' class='mt-1'>
+      <a href='/posts/edit/{{this.post._id}}' class='btn primary'>Edit Post</a>
+      <button type='submit' class='btn danger'>Delete Post</button>
+    </form>
+  </div>
+
+</div>
