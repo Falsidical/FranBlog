@@ -9,6 +9,7 @@
 @use 'sections/allposts';
 @use 'sections/newpost';
 @use 'sections/admin';
+@use 'components/user-forms';
 @import 'variables';
 
 * {
@@ -59,4 +60,8 @@ textarea {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.huge {
+  font-size: 8rem;
 }

@@ -15,7 +15,7 @@
         <td>{{this._id}}</td>
         <td>{{this.title}}</td>
         <td>{{this.author}}</td>
-        <td>{{formatDate this.date}}</td>
+        <td>{{formatDateFull this.date}}</td>
         <td>{{this.hidden}}</td>
         <td class='flex'>
           <a href='/posts/edit/{{this._id}}' class='btn primary'>Edit Post</a>
@@ -27,8 +27,11 @@
     {{/each}}
   </table>
 
-  <form action='/users/logout' method='post'>
-    <button type='submit' class='btn primary'>Sign out</button>
-  </form>
-
+  <h2 class='title-font'>Manage Users</h2>
+  <div class='button-row'>
+    <form action='/users/logout' method='post'>
+      <button type='submit' class='btn primary'>Sign out</button>
+    </form>
+    <a href='/users/register' class='btn primary'>Register new user</a>
+  </div>
 </div>

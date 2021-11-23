@@ -1,22 +1,23 @@
 import express from 'express';
 import postsController from '../controllers/posts.js';
+import requireLogin from '../middleware/requireLogin.js';
 
 const router = express.Router();
 
 router.get('/', postsController.showPosts);
 
-router.post('/', postsController.createPost);
+router.post('/', requireLogin, postsController.createPost);
 
-router.get('/new', postsController.renderNewPostForm);
+router.get('/new', requireLogin, postsController.renderNewPostForm);
 
-router.get('/admin', postsController.renderAdminPage);
+router.get('/admin', requireLogin, postsController.renderAdminPage);
 
-router.get('/edit/:id', postsController.renderEditForm);
+router.get('/edit/:id', requireLogin, postsController.renderEditForm);
 
 router.get('/:id', postsController.renderPost);
 
-router.delete('/:id', postsController.deletePost);
+router.delete('/:id', requireLogin, postsController.deletePost);
 
-router.put('/:id', postsController.editPost);
+router.put('/:id', requireLogin, postsController.editPost);
 
 export default router;

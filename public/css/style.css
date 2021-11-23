@@ -192,7 +192,7 @@ nav :first-child:hover {
   border-radius: 50%;
 }
 .about-me .description {
-  color: #e7e7e7;
+  color: #fff;
   padding: 1rem;
 }
 .about-me .description p {
@@ -267,6 +267,25 @@ footer a:hover {
   min-height: 100vh;
 }
 
+.button-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 20px;
+}
+
+.user-form {
+  padding: 2rem 0;
+  border: 2px solid #fff;
+}
+.user-form label,
+.user-form input,
+.user-form button {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -319,6 +338,10 @@ textarea {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.huge {
+  font-size: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

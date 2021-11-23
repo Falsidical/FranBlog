@@ -8,7 +8,7 @@ const showPosts = async (req, res) => {
 const createPost = async (req, res) => {
   try {
     const post = new Post(req.body);
-    post.author = 'Fran';
+    post.author = req.session.username;
     const showPost = req.body.showPost;
     showPost && (post.hidden = false);
     await post.save();
@@ -23,19 +23,22 @@ const renderNewPostForm = (req, res) => {
 };
 
 const renderAdminPage = async (req, res) => {
-  if (!req.session.user_id) {
-    return res.redirect('/users/login');
-  }
   const posts = await Post.find().lean();
   res.render('posts/admin', {
     posts: posts,
-    helpers: {
-      formatDate: function (date) {
-        return date.toDateString();
-      },
-    },
   });
 };
+// const renderAdminPage = async (req, res) => {
+//   const posts = await Post.find().lean();
+//   res.render('posts/admin', {
+//     posts: posts,
+//     helpers: {
+//       formatDate: function (date) {
+//         return date.toLocaleString();
+//       },
+//     },
+//   });
+// };
 
 const renderEditForm = async (req, res) => {
   const { id } = req.params;
