@@ -1,8 +1,8 @@
 import Post from '../models/post.js';
 
 const showPosts = async (req, res) => {
-  const posts = await Post.find().lean();
-  res.render('posts', { posts: posts });
+  const posts = await Post.find({ hidden: false }).sort({ date: -1 }).lean();
+  res.render('posts/posts', { posts: posts });
 };
 
 const createPost = async (req, res) => {
@@ -23,20 +23,30 @@ const renderNewPostForm = (req, res) => {
 };
 
 const renderAdminPage = async (req, res) => {
+  if (!req.session.user_id) {
+    return res.redirect('/users/login');
+  }
   const posts = await Post.find().lean();
-  res.render('admin', { posts: posts });
+  res.render('posts/admin', {
+    posts: posts,
+    helpers: {
+      formatDate: function (date) {
+        return date.toDateString();
+      },
+    },
+  });
 };
 
 const renderEditForm = async (req, res) => {
   const { id } = req.params;
   const post = await Post.findById(id).lean();
-  res.render('edit', { layout: 'main', post: post });
+  res.render('posts/edit', { layout: 'main', post: post });
 };
 
 const renderPost = async (req, res) => {
   const { id } = req.params;
   const post = await Post.findById(id).lean();
-  res.render('post', { post: post });
+  res.render('posts/post', { post: post });
 };
 
 const deletePost = async (req, res) => {

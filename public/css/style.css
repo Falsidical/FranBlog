@@ -35,7 +35,7 @@ table {
   margin: 2rem auto;
   width: 100%;
   background-color: #15151590;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 th {
@@ -197,11 +197,6 @@ nav :first-child:hover {
 }
 .about-me .description p {
   font-style: italic;
-}
-
-.about {
-  width: 65%;
-  margin: 0 auto;
 }
 
 footer {
