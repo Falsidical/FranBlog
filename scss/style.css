@@ -1,0 +1,96 @@
+@use 'components/typography';
+@use 'components/buttons';
+@use 'components/tables';
+@use 'sections/navbar';
+@use 'sections/intro';
+@use 'sections/posts';
+@use 'sections/aboutme';
+@use 'sections/footer';
+@use 'sections/allposts';
+@use 'sections/newpost';
+@use 'sections/admin';
+@use 'components/user-forms';
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #00a4eb;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container {
+  width: 65%;
+  margin: 6rem auto 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.d-block {
+  display: block;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.huge {
+  font-size: 8rem;
+}
+/*# sourceMappingURL=style.css.map */

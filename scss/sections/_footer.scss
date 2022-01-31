@@ -43,3 +43,19 @@ footer {
   height: 2rem;
   width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+  footer {
+    .footer-box {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+    .links {
+      text-align: center;
+    }
+    .social {
+      width: 50%;
+      margin: 2rem auto;
+    }
+  }
+}

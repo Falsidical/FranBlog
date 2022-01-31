@@ -1,12 +1,57 @@
+@import '../variables';
+
 .user-form {
-  padding: 2rem 0;
+  width: fit-content;
+  margin: 3rem auto;
+  text-align: center;
+  border-radius: 4%;
+  background-color: #333;
+  padding: 2rem;
   border: 2px solid #fff;
   label,
   input,
   button {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: block;
     text-align: center;
     margin: 1rem auto;
+    border-radius: 8px;
+  }
+  img {
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    width: 160px;
+    border-radius: 50%;
+  }
+}
+
+textarea,
+input[type='text'],
+input[type='password'] {
+  background-color: #333;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.icon-row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  * {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.icon-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 50%;
+  svg {
+    color: #fff;
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
   }
 }

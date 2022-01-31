@@ -18,3 +18,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 1600px) {
+  .about-me {
+    width: $width-sm;
+    flex-direction: column;
+  }
+}

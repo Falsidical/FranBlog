@@ -123,9 +123,6 @@ nav :first-child:hover {
   margin-top: 2rem;
   text-decoration: underline;
 }
-.intro-box .intro-link:hover {
-  color: #00a4eb;
-}
 
 .custom-shape-divider-bottom-1637545065 {
   position: absolute;
@@ -180,6 +177,10 @@ nav :first-child:hover {
   color: #00a4eb;
 }
 
+.allposts-post img {
+  width: 100%;
+}
+
 .about-me {
   display: flex;
   width: 50%;
@@ -199,6 +200,12 @@ nav :first-child:hover {
   font-style: italic;
 }
 
+@media only screen and (max-width: 1600px) {
+  .about-me {
+    width: 90%;
+    flex-direction: column;
+  }
+}
 footer {
   background-color: #111;
   color: #fff;
@@ -239,6 +246,19 @@ footer a:hover {
   width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  footer .footer-box {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  footer .links {
+    text-align: center;
+  }
+  footer .social {
+    width: 50%;
+    margin: 2rem auto;
+  }
+}
 .allposts {
   width: 65%;
   margin: 8rem auto;
@@ -274,16 +294,59 @@ footer a:hover {
 }
 
 .user-form {
-  padding: 2rem 0;
+  width: fit-content;
+  margin: 3rem auto;
+  text-align: center;
+  border-radius: 4%;
+  background-color: #333;
+  padding: 2rem;
   border: 2px solid #fff;
 }
 .user-form label,
 .user-form input,
 .user-form button {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: block;
   text-align: center;
   margin: 1rem auto;
+  border-radius: 8px;
+}
+.user-form img {
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  width: 160px;
+  border-radius: 50%;
+}
+
+textarea,
+input[type=text],
+input[type=password] {
+  background-color: #333;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.icon-row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.icon-row * {
+  width: 36px;
+  height: 36px;
+}
+
+.icon-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 50%;
+}
+.icon-row svg {
+  color: #fff;
+}
+.icon-row svg:hover {
+  color: #00a4eb;
+  cursor: pointer;
 }
 
 * {
@@ -295,6 +358,9 @@ footer a:hover {
 a {
   text-decoration: none;
   color: #fff;
+}
+a:hover {
+  color: #00a4eb;
 }
 
 body {
@@ -329,15 +395,24 @@ textarea {
 
 .container {
   width: 65%;
-  margin: 8rem auto;
+  margin: 6rem auto 4rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
 .d-block {
   display: block;
 }
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.t-center {
+  text-align: center;
 }
 
 .huge {

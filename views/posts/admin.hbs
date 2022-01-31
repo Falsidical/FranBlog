@@ -3,7 +3,6 @@
 
   <table>
     <tr>
-      <th>ID</th>
       <th>Title</th>
       <th>Author</th>
       <th>Date</th>
@@ -12,14 +11,13 @@
     </tr>
     {{#each posts}}
       <tr>
-        <td>{{this._id}}</td>
-        <td>{{this.title}}</td>
+        <td><a href='/posts/{{this.linkTitle}}'>{{this.title}}</a></td>
         <td>{{this.author}}</td>
         <td>{{formatDateFull this.date}}</td>
         <td>{{this.hidden}}</td>
         <td class='flex'>
-          <a href='/posts/edit/{{this._id}}' class='btn primary'>Edit Post</a>
-          <form action='/posts/{{this._id}}?_method=DELETE' method='post'>
+          <a href='/posts/edit/{{this.linkTitle}}' class='btn primary'>Edit Post</a>
+          <form action='/posts/{{this.linkTitle}}?_method=DELETE' method='post'>
             <button type='submit' class='btn danger'>Delete</button>
           </form>
         </td>

@@ -21,6 +21,9 @@
 a {
   text-decoration: none;
   color: $text-color;
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 body {
@@ -51,7 +54,13 @@ textarea {
 
 .container {
   width: $width;
-  margin: 8rem auto;
+  margin: 6rem auto 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: $width-sm;
+  }
 }
 
 .d-block {
@@ -60,6 +69,10 @@ textarea {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.t-center {
+  text-align: center;
 }
 
 .huge {
